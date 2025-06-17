@@ -48,3 +48,15 @@ CREATE TABLE project_category (
   	UNIQUE KEY (project_id, category_id)
 	);
 	
+	
+	
+INSERT INTO project (project_name, estimated_hours, actual_hours, difficulty, notes) VALUES ('Hang a door', 4.0, 3.0, 3, 'Use the door hangers from Home Depot');
+INSERT INTO material (project_id, material_name, num_required, cost) VALUES (1, 'Door hangers', 1, 10.00);
+INSERT INTO material (project_id, material_name, num_required, cost) VALUES (1, 'Screws', 20, 4.0);	
+INSERT INTO step (project_id, step_text, step_order) VALUES (1, 'Align hangers in door frame', 1);
+INSERT INTO step (project_id, step_text, step_order) VALUES (1, 'Screw hangers in door frame', 2);	
+INSERT INTO category (category_id, category_name) VALUES (1, 'Doors and Windows');	
+INSERT INTO category (category_id, category_name) VALUES (2, 'Repairs');
+INSERT INTO category (category_id, category_name) VALUES (3, 'Gardening');
+INSERT INTO project_category (project_id, category_id) VALUES (1, 1);
+INSERT INTO project_category (project_id, category_id) VALUES (1, 2);
